@@ -14,6 +14,6 @@
 - gulp serve
 - browse to localhost:3000
 - connect to mongodb and run: 
-  use locations;
-  db.createUser({user: "test", pwd: "123", roles: [{role: "dbOwner", db: "locations"}]});
+  `use locations;
+  db.createUser({user: "test", pwd: "123", roles: [{role: "dbOwner", db: "locations"}]});`
  
