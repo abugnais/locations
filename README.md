@@ -11,8 +11,8 @@
 - n latest
 - npm install
 - bower install
-- gulp serve
 - connect to mongodb and run: 
   `use locations;
   db.createUser({user: "locations", pwd: "123456", roles: [{role: "dbOwner", db: "locations"}]});`
+- gulp serve
 - browse to localhost:3000
