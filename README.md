@@ -15,5 +15,5 @@
 - browse to localhost:3000
 - connect to mongodb and run: 
   `use locations;
-  db.createUser({user: "test", pwd: "123", roles: [{role: "dbOwner", db: "locations"}]});`
+  db.createUser({user: "locations", pwd: "123456", roles: [{role: "dbOwner", db: "locations"}]});`
  
