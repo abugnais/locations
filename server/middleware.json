@@ -1,0 +1,20 @@
+{
+  "session": {},
+  "auth": {},
+  "parse": {},
+  "routes": {
+    "loopback#rest": {
+      "paths": [
+        "${restApiRoot}"
+      ]
+    }
+  },
+  "files": {
+    "loopback#static": {
+      "params": "$!../dist"
+    }
+  },
+  "final:after": {
+    "errorhandler": {}
+  }
+}

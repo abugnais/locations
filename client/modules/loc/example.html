@@ -1,0 +1,35 @@
+<script src = 'http://maps.google.com/maps/api/js?v=3&sensor=true'></script>
+
+<div ng-if="example === 'locs'">
+  <div class="colors" ng-controller="locList">
+
+    <form ui-keypress="{13:'createObj()'}">
+      <input type="text" ng-model="objName">
+      <button ng-click="createObj()">Create an object</button>
+    </form>
+
+    <table>
+      <tr>
+        <th>Object Name</th>
+        <th>Object ID</th>
+      </tr>
+      <tr ng-repeat="obj in objs">
+        <td>{{obj.name}}</td>
+        <td>{{obj.id}}</td>
+      </tr>
+    </table>
+
+    <form ui-keypress="{13:'createLoc()'}">
+      <strong>Enter a location:</strong>
+      <input type="text" ng-model="objId" />
+      <input type="text" ng-model="lat" />
+      <input type="text" ng-model="lng" />
+      <button ng-click="createLoc()">Create a location</button>
+    </form>
+
+    <ng-map zoom="1" map-type-id="TERRAIN">
+      <marker ng-repeat="loc in locs" position="{{loc.coordinates.lat}}, {{loc.coordinates.lng}}"></marker>
+    </ng-map>
+
+  </div>
+</div>

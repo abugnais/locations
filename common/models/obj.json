@@ -1,0 +1,24 @@
+{
+  "name": "Obj",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "locations": {
+      "type": "hasMany",
+      "model": "Loc"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
