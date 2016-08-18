@@ -28,7 +28,7 @@
     </form>
 
     <ng-map zoom="1" map-type-id="TERRAIN">
-      <marker ng-repeat="loc in locs" position="{{loc.coordinates.lat}}, {{loc.coordinates.lng}}"></marker>
+      <marker ng-repeat="loc in locs" position="{{loc.coordinates.lat}}, {{loc.coordinates.lng}}" icon="{{!$last ? 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|0000FF' : ''}}"></marker>
     </ng-map>
 
   </div>
